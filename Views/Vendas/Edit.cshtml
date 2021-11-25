@@ -1,0 +1,45 @@
+﻿@model SistemaGestaoDeVendas.Models.Dominio.Venda
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Editar</h1>
+
+<h4>Venda</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id" />
+            <div class="form-group">
+                <label asp-for="clienteID" class="control-label"></label>
+                <select asp-for="clienteID" class="form-control" asp-items="ViewBag.clienteID"></select>
+                <span asp-validation-for="clienteID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dataVenda" class="control-label"></label>
+                <input asp-for="dataVenda" class="form-control" />
+                <span asp-validation-for="dataVenda" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="status" class="control-label"></label>
+                <select asp-for="status" asp-items="ViewBag.status" class="form-control"></select>
+                <span asp-validation-for="status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Listagem de Vendas</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

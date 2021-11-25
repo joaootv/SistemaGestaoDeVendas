@@ -1,0 +1,99 @@
+﻿@model IEnumerable<SistemaGestaoDeVendas.Models.Consulta.PivotVendas>
+
+@{
+    ViewData["Title"] = "PivotVendas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>PivotVendas</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ano)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mes1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mes2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mes3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mes4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mes5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mes6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mes7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mes8)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mes9)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mes10)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mes11)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mes12)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ano)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mes1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mes2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mes3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mes4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mes5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mes6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mes7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mes8)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mes9)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mes10)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mes11)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mes12)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

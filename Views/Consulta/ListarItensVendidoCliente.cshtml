@@ -1,0 +1,63 @@
+﻿@model IEnumerable<SistemaGestaoDeVendas.Models.Consulta.ItensVendidos>
+
+@{
+    ViewData["Title"] = "ListarItensVendidoCliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ListarItensVendidoCliente</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.cliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.venda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.itemVendas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.valor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.venda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.data)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.itemVendas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.valor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
