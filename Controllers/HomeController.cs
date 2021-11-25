@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SistemaGestaoDeVendas.Models;
 using System;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace SistemaGestaoDeVendas.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -19,11 +21,6 @@ namespace SistemaGestaoDeVendas.Controllers
         }
 
         public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
         {
             return View();
         }

@@ -7,10 +7,11 @@ using SistemaGestaoDeVendas.Models;
 using SistemaGestaoDeVendas.Models.Dominio;
 using ExcelDataReader;
 using System.Text;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SistemaGestaoDeVendas.Controllers
 {
-
+    [Authorize]
     public class DadosController : Controller
     {
         private readonly Contexto _contexto;

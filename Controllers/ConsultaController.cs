@@ -10,9 +10,11 @@ using System.Threading.Tasks;
 using SistemaGestaoDeVendas.Models.Consulta;
 using SistemaGestaoDeVendas.Models;
 using SistemaGestaoDeVendas.Extra;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SistemaGestaoDeVendas.Controllers
 {
+    [Authorize]
     public class ConsultaController : Controller
     {
         private readonly Contexto _context;

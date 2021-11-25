@@ -11,7 +11,7 @@ using SistemaGestaoDeVendas.Models.Dominio;
 
 namespace SistemaGestaoDeVendas.Controllers
 {
-    [Authorize(Roles = "vendedor")]
+    [Authorize]
     public class ProdutosController : Controller
     {
         private readonly Contexto _context;

@@ -50,6 +50,18 @@
                                 <li><a class="dropdown-item" asp-area="" asp-controller="Vendas" asp-action="Create">Abrir Nova Venda</a></li>
                             </ul>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Relatórios
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Consulta" asp-action="PivotVendas">Vendas Realizadas nos Meses</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Consulta" asp-action="AgruparVendas">Total de Gastos dos Clientes</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Consulta" asp-action="ListarItensVendidoCliente">Produtos Vendidos por Cliente</a></li>
+                            </ul>
+                        </li>
                     </ul>
                     <partial name="_LoginPartial" />
             </div>
@@ -63,7 +75,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2021 - SistemaGestaoDeVendas - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2021 - Sistema para Gestao de Vendas
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
